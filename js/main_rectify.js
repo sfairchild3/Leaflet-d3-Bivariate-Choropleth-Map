@@ -432,11 +432,7 @@
 				changeAttribute(this.value, combined, map, countryCenter, world)
 			});
 
-		//add initial option
-		var titleOption = dropdown.append("option")
-			.attr("class", "titleOption")
-			.attr("disabled", "true")
-			.text("GDP");
+
 
 		//add attribute name options
 		var attrOptions = dropdown.selectAll("attrOptions")
