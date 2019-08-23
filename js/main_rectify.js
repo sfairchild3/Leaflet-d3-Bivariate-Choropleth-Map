@@ -18,7 +18,7 @@
 	var attrArray = ["GDP", "Pop Growth"]
 
 	//current selection from attribute array
-	var expressed = attrArray[1]
+	var expressed = attrArray[0]
 
 	window.onload = getData();
 
