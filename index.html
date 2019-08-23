@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../../../favicon.ico">
+	<title>Global Carbon Emissions</title>
+
+	<!--Template based on URL below-->
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- Place your stylesheets here-->
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+	<link href="css/leaflet.css" rel="stylesheet">
+	<!--leaflet-search-plugin css-->
+	<link rel="stylesheet" href="css/leaflet-search.src.css">
+
+	<!-- leaflet zoom min plugin css -->
+	<link rel="stylesheet" href="css/L.Control.ZoomMin.css" media="screen">
+
+	<link rel="stylesheet" href="css/L.Control.ZoomMin.css">
+	<link rel="stylesheet" href="css/leaflet-search.css" />
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lexend+Mega&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Center for Science</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Climate Change Links</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="https://www.ucsusa.org/global-warming/science-and-impacts/science/each-countrys-share-of-co2.html">-Climate Change</a>
+						<a class="dropdown-item" href="https://ourworldindata.org/grapher/co-emissions-per-capita-vs-gdp-per-capita-international-">-CO2 and GDP</a> <a class="dropdown-item" href="https://www.biologicaldiversity.org/programs/population_and_sustainability/climate/index.html">-CO2 and Population Growth</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="top" class="text-center mt-5 pt-5">
+		<h1>Global Carbon Emissions</h1>
+
+		<p class="lead">Carbon Emissions are the leading cause of <br> climate change. Use this map to find out information <br> about Carbon Emissions, GDP, and Population Growth across <br> a 53 year time span: 1961 -2014. </p>
+	</div>
+
+
+	<main role="main" class="container-fluid">
+
+		<hr />
+
+		<div class="row">
+			<hr />
+			<div id="map" class="col"></div>
+			<div class="col">
+				<table id="head">
+					<thead class="col table tableFixHead">
+						<tr>
+							<th scope="col">Country</th>
+							<th scope="col" id="co2">CO2</th>
+							<th scope="col" id="dropdown">
+								<p id=filter></p>
+							</th>
+
+						</tr>
+					</thead>
+				</table>
+
+				<table id="table" class="table tableFixHead table-bordered table-wrapper-scroll-y my-custom-scrollbar">
+
+				</table>
+			</div>
+		</div>
+		<div>
+			<center>
+
+				<div id="slider"></div>
+
+			</center>
+		</div>
+		<div class="row">
+			<div id="chart" class="col"></div>
+
+			<div id="legend" class="col">
+				<div id="year"></div>
+				<div class="summary col">
+					<h3 id="selected-info"></h3>
+					<hr />
+					<div>
+						<h4 id="details">
+						</h4>
+
+					</div>
+
+					<hr />
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
+	</main><!-- /.container -->
+
+
+	<footer>
+	</footer>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!--other scripts-->
+	<script src="lib/d3.js"></script>
+	<script src="lib/leaflet.js"></script>
+	<script src="lib/topojson.js"></script>
+	<script src="lib/leaflet-search.src.js"></script>
+	<script src="lib/geostats.js"></script>
+
+	<!-- leaflet zoom min plugin script -->
+	<script src="lib/L.Control.ZoomMin.js"></script>
+
+	<!-- leaflet d3svgOverlay script -->
+	<script src="lib/L.D3SvgOverlay.js"></script>
+
+	<script src="js/main_rectify.js"></script>
+
+
+</body></html>

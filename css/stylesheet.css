@@ -1,0 +1,199 @@
+body {
+	background-color: #F8F8FF;
+	font-family: 'Lexend Mega', sans-serif;
+}
+
+.container-fluid {
+	max-width: 1500px;
+	background-color: #9999;
+	margin-bottom: 25px;
+}
+
+
+.leaflet-container {
+	padding: 0px;
+}
+
+.dropdown-menu {
+	text-align: left;
+}
+
+.col {
+	height: 400px;
+	width: 48%;
+	margin: 15px;
+}
+
+#selected-info {
+	margin-left 55px;
+}
+
+#year {
+	color: #222;
+	margin-top: 35px;
+	margin-left: 85px;
+}
+
+#map {
+	padding-left: 15px;
+	padding-right: 15px;
+	/*	box-shadow: 0 0 5px 2px #282a2d;*/
+}
+
+#top {
+	/*	background-image: url("germany-heatwave-1600x337.jpg");*/
+	background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
+	background-color: #90362F;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 3px 2px #282a2d;
+	margin-top: -100px;
+	height: 20%;
+	background-position: 0;
+}
+
+h1 {
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+nav {
+	background-color: #ff5722;
+}
+
+#chart {
+	background-color: #fff;
+	height: 400px;
+	/*	box-shadow: 0 0 5px 2px #282a2d;*/
+
+}
+
+#legend {
+	background-color: #fff;
+	height: 400px;
+	width: 48%;
+}
+
+#dropdown,
+#filter {
+	height: 15px;
+
+}
+
+#dropdown {
+	width: 33%;
+}
+
+
+.select-var {
+	z-index: 10;
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 2px;
+	border: transparent;
+}
+
+.my-custom-scrollbar {
+	/*	position: absolute;*/
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+
+}
+
+
+.tableFixHead thead th {
+	position: sticky;
+	top: 0;
+}
+
+#table {
+	background-color: #ffffff;
+	height: 345px;
+	/*	box-shadow: 0 0 5px 2px #282a2d;*/
+}
+
+
+
+
+th,
+td {
+	padding: 8px 16px;
+}
+
+th {
+	background: #eee;
+	background-color: #eee;
+}
+
+#table td {
+	width: 33%;
+}
+
+#head th {
+	background-color: #eee;
+	height: 25px;
+	padding: 8px 16px;
+	width: 3%;
+
+	/*	margin-left: -15px;*/
+
+	/*    box-shadow: 0 0 5px 2px #282a2d;*/
+
+}
+
+footer {
+	height: 50px;
+	background-color: #7F7B78;
+}
+
+
+.range-slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #fff;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #333;
+	cursor: pointer;
+	box-shadow: 0 0 5px 2px #282a2d;
+}
+
+.lead {
+	font-size: 2vh;
+	color: white;
+}
+
+.highlight {
+	background-color: aqua;
+}
+
+.summary {
+	float: right;
+	margin-right: 40px;
+	margin-top: -40px;
+}
+
+#selected-info {
+	margin-bottom: 30px;
+}
+
+.svg-legend {
+	margin-top: 50px;
+	margin-left: 25px;
+}
