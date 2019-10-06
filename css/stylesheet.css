@@ -41,9 +41,9 @@ body {
 }
 
 #top {
-	/*	background-image: url("germany-heatwave-1600x337.jpg");*/
-	background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
-	background-color: #90362F;
+		background-image: url("germany-heatwave-1600x337.jpg");
+/* 	background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png"); */
+/* 	background-color: #90362F; */
 	background-size: 100%;
 	background-repeat: no-repeat;
 	box-shadow: 0 0 3px 2px #282a2d;
